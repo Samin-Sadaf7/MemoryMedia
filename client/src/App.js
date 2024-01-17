@@ -2,7 +2,9 @@ import { AppBar, Container, Grid, Grow, Typography } from '@material-ui/core';
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { getPosts } from "./actions/posts";
-import memories from "./images/download.jpg";
+import Form from "./components/Form/Form";
+import Posts from "./components/Post/Posts/Post";
+import memories from "./images/memories.png";
 import useStyles from "./styles";
 const App = () =>{
     const classes= useStyles();
@@ -20,10 +22,10 @@ const App = () =>{
             <Container>
                 <Grid container justify="space-between" align-items="stretch" spacing ={3}>
                     <Grid item xs={12} sm={7}>
-                        <h1>Name</h1>
+                        <Posts/>
                     </Grid>
                     <Grid item xs={12} sm={4}>
-                        <h1>Name</h1>
+                        <Form/>
                     </Grid>
                 </Grid>
             </Container>
